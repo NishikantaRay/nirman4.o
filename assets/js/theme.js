@@ -664,7 +664,7 @@ Description: Kimono - Photography Agency
         var SwiperSliderTwentyOne = new Swiper('.wptb-swiper-slider-twentyone', {
             loop: true,
             autoplay: {
-                delay: 3000,
+                delay: 11000,
             },
             autoHeight: true,
             effect: "creative",
@@ -677,7 +677,7 @@ Description: Kimono - Photography Agency
                     translate: ["100%", 0, 0],
                 },
             },
-            speed: 2500,
+            speed: 11000,
             slidesPerView: "1",
             spaceBetween: 0,
             // centeredSlides: true,
