@@ -163,6 +163,7 @@ Description: Kimono - Photography Agency
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                dynamicBullets: false,
             },
             navigation: {
                 nextEl: '.swiper-button-next',
