@@ -624,7 +624,7 @@
 
 /* Coming Soon */
 .wptb-credential {
-    padding: 100px 100px;
+    padding: 100px 100px; 
     height: 100vh;
 }
 .wptb-credential--inner {
@@ -643,7 +643,7 @@
     font-size: 60px;
     font-style: normal;
     font-weight: var(--fw-medium);
-    line-height: 74px; /* 55.2% */
+    /* line-height: 74px;  */
     text-transform: uppercase;
     color: var(--color-one);
     /* text-shadow: 5px 5px var(--color-one); */
@@ -664,7 +664,7 @@
     font-weight: var(--fw-medium);
     text-transform: uppercase;
     color: var(--color-white-fixed);
-    margin-top: 30px;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
@@ -759,7 +759,7 @@
     .wptb-credential #countdown ul::after {
         content: '';
         position: absolute;
-        top: 20px;
+        top: 10px;
         width: 235px;
         height: 1px;
         background-color: rgba(var(--color-white-fixed-rgb), 0.3);

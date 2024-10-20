@@ -6,7 +6,32 @@ Author URL:
 Description: Kimono - Photography Agency
 */
 /*	IE 10 Fix*/
+const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
 
+let countDown = new Date('JANUARY 29, 2025 00:00:00').getTime(),
+    x = setInterval(function() {
+
+      let now = new Date().getTime(),
+          distance = countDown - now;
+
+      document.getElementById('dayss').innerText = Math.floor(distance / day);
+      document.getElementById('hourss').innerText = Math.floor((distance % day) / hour);
+      document.getElementById('minutess').innerText = Math.floor((distance % hour) / minute);
+      document.getElementById('secondss').innerText = Math.floor((distance % minute) / second);
+      
+      // If the countdown is over, clear the interval
+      if (distance < 0) {
+          clearInterval(x);
+          document.getElementById('dayss').innerText = '0';
+          document.getElementById('hourss').innerText = '0';
+          document.getElementById('minutess').innerText = '0';
+          document.getElementById('secondss').innerText = '0';
+      }
+
+    }, second);
 (function ($) {
 	'use strict';
 	
