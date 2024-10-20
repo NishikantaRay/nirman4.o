@@ -1019,7 +1019,19 @@ Ready Components Stylesheet
   top: auto;
   bottom: 10%; /* Adjust as needed for bottom positioning */
 }
-
+#toggle-music {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  z-index: 1000;
+}
 @media (max-width: 767px) {
   .wptb-slider.style1 .wptb-slider--inner {
     left: 0; /* Center the element horizontally */

@@ -27,7 +27,11 @@
 
 
     <body >
-        
+        <audio id="background-music"  loop>
+            <source src="../assets/img/abc.mp3" type="audio/mp3">
+        </audio>
+        <button id="play-music" onclick="playMusic()" style="display: none;"><i class="fa-solid fa-play"></i></button>
+        <button id="toggle-music" style="display: none;"><i class="fa-solid fa-pause"></i></button>
         <!-- Preloader -->
         <div id="preloader">
 			<div class="preloader-inner">

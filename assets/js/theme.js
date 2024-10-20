@@ -32,6 +32,36 @@ let countDown = new Date('JANUARY 29, 2025 00:00:00').getTime(),
       }
 
     }, second);
+
+    document.addEventListener('click', () => {
+        const audio = document.getElementById('background-music');
+        const toggleButton = document.getElementById('toggle-music');
+    
+        // Play the audio on first user interaction
+        if (audio.paused) {
+            audio.play().then(() => {
+                // Show the toggle button after the audio starts playing
+                toggleButton.style.display = 'block';
+            }).catch((error) => {
+                console.log('User interaction required to play the audio:', error);
+            });
+        }
+    }, { once: true });
+    
+    document.getElementById('toggle-music').addEventListener('click', () => {
+        const audio = document.getElementById('background-music');
+        const toggleButton = document.getElementById('toggle-music');
+    
+        if (audio.paused) {
+            audio.play();
+            // Change to pause icon when playing
+            toggleButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        } else {
+            audio.pause();
+            // Change to play icon when paused
+            toggleButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+        }
+    });
 (function ($) {
 	'use strict';
 	
