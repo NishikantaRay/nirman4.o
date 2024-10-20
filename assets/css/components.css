@@ -906,12 +906,7 @@ Ready Components Stylesheet
   height: 130%;
   z-index: 1;
 }
-.header_right_part {
-  position: absolute;
-  margin-top: 10%;
-  left: 25%;
-  
-}
+
 
 /* Adjust the logo */
 .wptb-slider.style1 .wptb-slider--inner .logo-home {
@@ -1031,7 +1026,12 @@ Ready Components Stylesheet
     top: 60%; /* Adjust top positioning for mobile */
     width: 90%; /* Scale the width to fit mobile screens */
   }
-
+  .header_right_part {
+    position: absolute;
+    margin-top: 10%;
+    left: 25%;
+    
+  }
   /* Adjust the logo size for mobile */
   .wptb-slider.style1 .wptb-slider--inner .logo-home {
     width: 100%;
