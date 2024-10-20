@@ -6,62 +6,88 @@ Author URL:
 Description: Kimono - Photography Agency
 */
 /*	IE 10 Fix*/
-const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
+document.addEventListener('DOMContentLoaded', function() {
+    const accordions = document.querySelectorAll(".accordion");
 
-let countDown = new Date('JANUARY 29, 2025 00:00:00').getTime(),
-    x = setInterval(function() {
+accordions.forEach((accordion, index) => {
+  const header = accordion.querySelector(".accordion__header");
+  const content = accordion.querySelector(".accordion__content");
+  const icon = accordion.querySelector("#accordion-icon");
 
-      let now = new Date().getTime(),
-          distance = countDown - now;
+  header.addEventListener("click", () => {
+    const isOpen = content.style.height === `${content.scrollHeight}px`;
 
-      document.getElementById('dayss').innerText = Math.floor(distance / day);
-      document.getElementById('hourss').innerText = Math.floor((distance % day) / hour);
-      document.getElementById('minutess').innerText = Math.floor((distance % hour) / minute);
-      document.getElementById('secondss').innerText = Math.floor((distance % minute) / second);
-      
-      // If the countdown is over, clear the interval
-      if (distance < 0) {
-          clearInterval(x);
-          document.getElementById('dayss').innerText = '0';
-          document.getElementById('hourss').innerText = '0';
-          document.getElementById('minutess').innerText = '0';
-          document.getElementById('secondss').innerText = '0';
-      }
+    accordions.forEach((a, i) => {
+      const c = a.querySelector(".accordion__content");
+      const ic = a.querySelector("#accordion-icon");
+
+      c.style.height = i === index && !isOpen ? `${c.scrollHeight}px` : "0px";
+      ic.classList.toggle("ri-add-line", i !== index || !isOpen);
+      ic.classList.toggle("ri-subtract-fill", i === index && !isOpen);
+    });
+  });
+});
+
+    const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+
+    // Make sure all elements exist before using them
+    const daysElement = document.getElementById('dayss');
+    const hoursElement = document.getElementById('hourss');
+    const minutesElement = document.getElementById('minutess');
+    const secondsElement = document.getElementById('secondss');
+    const audio = document.getElementById('background-music');
+    const toggleButton = document.getElementById('toggle-music');
+
+    // Check if the elements exist
+    if (!daysElement || !hoursElement || !minutesElement || !secondsElement || !audio || !toggleButton) {
+        console.error('One or more elements are missing from the DOM');
+        return; // Stop the script if elements are missing
+    }
+
+    let countDown = new Date('JANUARY 29, 2025 00:00:00').getTime();
+    const x = setInterval(function() {
+        let now = new Date().getTime(),
+            distance = countDown - now;
+
+        daysElement.innerText = Math.floor(distance / day);
+        hoursElement.innerText = Math.floor((distance % day) / hour);
+        minutesElement.innerText = Math.floor((distance % hour) / minute);
+        secondsElement.innerText = Math.floor((distance % minute) / second);
+
+        if (distance < 0) {
+            clearInterval(x);
+            daysElement.innerText = '0';
+            hoursElement.innerText = '0';
+            minutesElement.innerText = '0';
+            secondsElement.innerText = '0';
+        }
 
     }, second);
 
     document.addEventListener('click', () => {
-        const audio = document.getElementById('background-music');
-        const toggleButton = document.getElementById('toggle-music');
-    
-        // Play the audio on first user interaction
         if (audio.paused) {
             audio.play().then(() => {
-                // Show the toggle button after the audio starts playing
                 toggleButton.style.display = 'block';
             }).catch((error) => {
                 console.log('User interaction required to play the audio:', error);
             });
         }
     }, { once: true });
-    
-    document.getElementById('toggle-music').addEventListener('click', () => {
-        const audio = document.getElementById('background-music');
-        const toggleButton = document.getElementById('toggle-music');
-    
+
+    toggleButton.addEventListener('click', () => {
         if (audio.paused) {
             audio.play();
-            // Change to pause icon when playing
             toggleButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
         } else {
             audio.pause();
-            // Change to play icon when paused
             toggleButton.innerHTML = '<i class="fa-solid fa-play"></i>';
         }
     });
+});
+
 (function ($) {
 	'use strict';
 	
