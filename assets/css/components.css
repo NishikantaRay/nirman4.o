@@ -2,7 +2,7 @@
 Ready Components Stylesheet
 -----------------------------------------------------------------*/
 /* faq */
-:root{
+/* :root{
   --color-primary: #FF4B4B;
   --color-text: #545d7a;
   --color-white: #fff;
@@ -23,7 +23,7 @@ Ready Components Stylesheet
   --transition: 0.4s ease-in-out; 
   --shadow: 0px 60px 56px -12px rgba(9, 40, 163, 0.05); 
   
-  }
+  } */
 .accordion__wrapper {
   background-color: var(--color-white);
   box-shadow: var(--shadow);
