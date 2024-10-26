@@ -6,91 +6,30 @@ Author URL:
 Description: Kimono - Photography Agency
 */
 /*	IE 10 Fix*/
-document.addEventListener('DOMContentLoaded', function() {
-    const accordions = document.querySelectorAll(".accordion");
 
-accordions.forEach((accordion, index) => {
-  const header = accordion.querySelector(".accordion__header");
-  const content = accordion.querySelector(".accordion__content");
-  const icon = accordion.querySelector("#accordion-icon");
-
-  header.addEventListener("click", () => {
-    const isOpen = content.style.height === `${content.scrollHeight}px`;
-
-    accordions.forEach((a, i) => {
-      const c = a.querySelector(".accordion__content");
-      const ic = a.querySelector("#accordion-icon");
-
-      c.style.height = i === index && !isOpen ? `${c.scrollHeight}px` : "0px";
-      ic.classList.toggle("ri-add-line", i !== index || !isOpen);
-      ic.classList.toggle("ri-subtract-fill", i === index && !isOpen);
-    });
-  });
-});
-
-    const second = 1000,
-          minute = second * 60,
-          hour = minute * 60,
-          day = hour * 24;
-
-    // Make sure all elements exist before using them
-    const daysElement = document.getElementById('dayss');
-    const hoursElement = document.getElementById('hourss');
-    const minutesElement = document.getElementById('minutess');
-    const secondsElement = document.getElementById('secondss');
-    const audio = document.getElementById('background-music');
-    const toggleButton = document.getElementById('toggle-music');
-
-    // Check if the elements exist
-    if (!daysElement || !hoursElement || !minutesElement || !secondsElement || !audio || !toggleButton) {
-        console.error('One or more elements are missing from the DOM');
-        return; // Stop the script if elements are missing
-    }
-
-    let countDown = new Date('JANUARY 29, 2025 00:00:00').getTime();
-    const x = setInterval(function() {
-        let now = new Date().getTime(),
-            distance = countDown - now;
-
-        daysElement.innerText = Math.floor(distance / day);
-        hoursElement.innerText = Math.floor((distance % day) / hour);
-        minutesElement.innerText = Math.floor((distance % hour) / minute);
-        secondsElement.innerText = Math.floor((distance % minute) / second);
-
-        if (distance < 0) {
-            clearInterval(x);
-            daysElement.innerText = '0';
-            hoursElement.innerText = '0';
-            minutesElement.innerText = '0';
-            secondsElement.innerText = '0';
-        }
-
-    }, second);
-
-    document.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play().then(() => {
-                toggleButton.style.display = 'block';
-            }).catch((error) => {
-                console.log('User interaction required to play the audio:', error);
-            });
-        }
-    }, { once: true });
-
-    toggleButton.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play();
-            toggleButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
-        } else {
-            audio.pause();
-            toggleButton.innerHTML = '<i class="fa-solid fa-play"></i>';
-        }
-    });
-});
 
 (function ($) {
 	'use strict';
-	
+	$(document).ready(function() {
+        $(".wptb-accordion").on("click", ".wptb-item-title", function () {
+            var $content = $(this).next(); // Get the associated content
+    
+            // Check if the clicked item's content is already visible
+            if ($content.is(':visible')) {
+                // If it's visible, slide it up (close it)
+                $content.slideUp();
+                $(this).parent().removeClass("active");
+            } else {
+                // If it's not visible, slide it down (open it)
+                $content.slideDown();
+                $(this).parent().addClass("active").siblings().removeClass("active");
+                
+                // Close all other content areas
+                $(".wptb-item--content").not($content).slideUp();
+                $(".wptb--item").not($(this).parent()).removeClass("active");
+            }
+        });
+    });
 	jQuery(document).ready(function () {
 
         // Preloader
@@ -1148,16 +1087,6 @@ accordions.forEach((accordion, index) => {
             $('.wptb-image-box1, .wptb-image-box2, .wptb-blog-grid1, .wptb-packages1, .wptb-icon-box2, .wptb-icon-box5, .wptb-icon-box7, .wptb-award-list .wptb-item, .wptb-features .wptb-item').removeClass('active');    
         }).on('mouseleave',  function(){ 
             $('.wptb-image-box1.highlight, .wptb-image-box2.highlight, .wptb-blog-grid1.highlight, .wptb-packages1.highlight, .wptb-icon-box2.highlight, .wptb-icon-box5.highlight, .wptb-icon-box7.highlight, .wptb-award-list .wptb-item.highlight, .wptb-features .wptb-item.highlight').addClass('active');     
-        });
-
-        // accordion
-        $(".wptb-accordion").on("click",".wptb-item-title", function () {
-            $(this).next().slideDown();
-            $(".wptb-item--content").not($(this).next()).slideUp();
-        });
-
-        $(".wptb-accordion").on("click",".wptb--item", function () {
-            $(this).addClass("active").siblings().removeClass("active");
         });
 
 
