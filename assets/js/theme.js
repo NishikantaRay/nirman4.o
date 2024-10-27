@@ -6,7 +6,40 @@ Author URL:
 Description: Kimono - Photography Agency
 */
 /*	IE 10 Fix*/
-
+document.addEventListener('DOMContentLoaded', function() {
+const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+    // Make sure all elements exist before using them
+    const daysElement = document.getElementById('dayss');
+    const hoursElement = document.getElementById('hourss');
+    const minutesElement = document.getElementById('minutess');
+    const secondsElement = document.getElementById('secondss');
+    const audio = document.getElementById('background-music');
+    const toggleButton = document.getElementById('toggle-music');
+    // Check if the elements exist
+    if (!daysElement || !hoursElement || !minutesElement || !secondsElement || !audio || !toggleButton) {
+        console.error('One or more elements are missing from the DOM');
+        return; // Stop the script if elements are missing
+    }
+    let countDown = new Date('JANUARY 29, 2025 00:00:00').getTime();
+    const x = setInterval(function() {
+        let now = new Date().getTime(),
+            distance = countDown - now;
+        daysElement.innerText = Math.floor(distance / day);
+        hoursElement.innerText = Math.floor((distance % day) / hour);
+        minutesElement.innerText = Math.floor((distance % hour) / minute);
+        secondsElement.innerText = Math.floor((distance % minute) / second);
+        if (distance < 0) {
+            clearInterval(x);
+            daysElement.innerText = '0';
+            hoursElement.innerText = '0';
+            minutesElement.innerText = '0';
+            secondsElement.innerText = '0';
+        }
+    }, second);
+});
 
 (function ($) {
 	'use strict';
