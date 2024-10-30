@@ -380,6 +380,7 @@
   background-size: cover;
   text-align: center;
   overflow: hidden;
+  height: 600px;
 }
 /* .wptb-page-heading .wptb-item--inner::after {
     content: url('../img/more/circle.png');
