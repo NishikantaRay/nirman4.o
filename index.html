@@ -1,1122 +1,933 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <meta name="description" content="Kimono - Photography Agency" />
-    <meta name="author" content="" />
 
-    <!-- Favicon and touch Icons -->
-    <link href="/assets/img/favicon.png" rel="shortcut icon" type="image/png" />
-    <link href="/assets/img/apple-touch-icon.html" rel="apple-touch-icon" />
-    <link
-      href="/assets/img/apple-touch-icon-72x72.html"
-      rel="apple-touch-icon"
-      sizes="72x72" />
-    <link
-      href="/assets/img/apple-touch-icon-114x114.html"
-      rel="apple-touch-icon"
-      sizes="114x114" />
-    <link
-      href="/assets/img/apple-touch-icon-144x144.html"
-      rel="apple-touch-icon"
-      sizes="144x144" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-    <!-- Page Title -->
-    <title>Nirman</title>
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta name="description"
+    content="Experience Nirman 4.0 - The ultimate tech extravaganza! Join us for innovation, learning, and community. Register now!" />
+  <meta name="author" content="Silicon Institute of Technology - Bhubaneswar" />
+  <meta name="keywords"
+    content="Nirman, tech event, innovation, learning, community, technology, robotics, coding, programming, web development, Nirman 4.0" />
+  <meta property="og:title" content="Nirman 4.0 - Empowering Innovation" />
+  <meta property="og:description"
+    content="Unleash your tech passion at Nirman 4.0. Join the ultimate tech extravaganza for innovation, learning, and community building!" />
+  <meta property="og:image" content="assets/images/nirman.png" />
+  <meta property="og:site_name" content="nirmansilicon.tech" />
+  <title>NIRMAN</title>
+  <link href="assets/img/favicon.png" rel="shortcut icon" type="image/png">
+  <link href="assets/img/apple-touch-icon.html" rel="apple-touch-icon">
+  <link href="assets/img/apple-touch-icon-72x72.html" rel="apple-touch-icon" sizes="72x72">
+  <link href="assets/img/apple-touch-icon-114x114.html" rel="apple-touch-icon" sizes="114x114">
+  <link href="assets/img/apple-touch-icon-144x144.html" rel="apple-touch-icon" sizes="144x144">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-    <!-- Styles Include -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-
-  <body>
-    <audio id="background-music" loop>
-      <source src="assets/img/abc.mp3" type="audio/mp3" />
-    </audio>
-    <button id="play-music" onclick="playMusic()" style="display: none">
-      <i class="fa-solid fa-play"></i>
-    </button>
-    <button id="toggle-music" style="display: none">
-      <i class="fa-solid fa-pause"></i>
-    </button>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="preloader-inner">
-        <div class="spinner">
-          <img
-            src="assets/img/logo-home.png"
-            alt="img" />
-          <!-- <img
+<body>
+  <audio id="background-music" loop>
+    <source src="assets/img/abc.mp3" type="audio/mp3" />
+  </audio>
+  <button id="play-music" onclick="playMusic()" style="display: none">
+    <i class="fa-solid fa-play"></i>
+  </button>
+  <button id="toggle-music" style="display: none">
+    <i class="fa-solid fa-pause"></i>
+  </button>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="spinner">
+        <img src="assets/img/logo-home.png" alt="img" />
+        <!-- <img
             src="https://wpthemebooster.com/demo/themeforest/html/kimono/assets/img/preloader-wheel.svg"
             alt="img"
             class="wheel" /> -->
-        </div>
       </div>
     </div>
+  </div>
 
-    <!-- pointer start -->
-    <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+  <!-- pointer start -->
+  <div class="pointer bnz-pointer" id="bnz-pointer"></div>
 
-    <!-- Main Header -->
-    <header class="header">
-      <!-- Lower Bar -->
-      <div class="header-inner">
-        <div class="container-fluid pe-0">
-          <div class="d-flex align-items-center justify-content-between">
-            <!-- Left Part -->
-            <div class="header_left_part d-flex align-items-center"></div>
+  <!-- Main Header -->
+  <header class="header">
+    <!-- Lower Bar -->
+    <div class="header-inner">
+      <div class="container-fluid pe-0">
+        <div class="d-flex align-items-center justify-content-between">
+          <!-- Left Part -->
+          <div class="header_left_part d-flex align-items-center"></div>
 
-            <!-- Center Part -->
-            <div class="header_center_part d-none d-xl-block">
-              <div class="mainnav">
-                <ul class="main-menu">
-                  <li class="menu-item"><a href="index.html">Home</a></li>
-                  <li class="menu-item"><a href="events.html">Events</a></li>
-                  <li class="menu-item"><a href="#">TimeLine</a></li>
-                  <li class="menu-item"><a href="gallery.html">Gallery</a></li>
-                  <li class="menu-item"><a href="#">Faq</a></li>
-                  <li class="menu-item">
-                    <a href="merch.html">Merchandise</a>
-                  </li>
+          <!-- Center Part -->
+          <div class="header_center_part d-none d-xl-block">
+            <div class="mainnav">
+              <ul class="main-menu">
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="events.html">Events</a></li>
+                <li class="menu-item"><a href="#timeline">TimeLine</a></li>
+                <li class="menu-item"><a href="gallery.html">Gallery</a></li>
+                <li class="menu-item"><a href="#faq">Faq</a></li>
+                <li class="menu-item">
+                  <a href="merch.html">Merchandise</a>
+                </li>
 
-                  <li class="menu-item menu-item-has-children">
-                    <a href="#">Register</a>
-                    <ul class="sub-menu" data-lenis-prevent>
-                      <li class="menu-item"><a href="#">Robo Race</a></li>
-                      <li class="menu-item"><a href="#">Ideate</a></li>
-                      <li class="menu-item"><a href="#">HackNation</a></li>
-                      <li class="menu-item"><a href="#">Line Follower</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                <li class="menu-item menu-item-has-children">
+                  <a href="#">Register</a>
+                  <ul class="sub-menu" data-lenis-prevent>
+                    <li class="menu-item"><a href="#">Robo Race</a></li>
+                    <li class="menu-item"><a href="#">Ideate</a></li>
+                    <li class="menu-item"><a href="#">HackNation</a></li>
+                    <li class="menu-item"><a href="#">Line Follower</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Part -->
+          <div class="header_right_part d-flex align-items-center">
+            <div class="aside_open wptb-element d-xl-none">
+              <div class="aside-open--inner">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
 
-            <!-- Right Part -->
-            <div class="header_right_part d-flex align-items-center">
-              <div class="aside_open wptb-element d-xl-none">
-                <div class="aside-open--inner">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+            <div class="header_search wptb-element d-xl-none">
+              <a href="#" class="modal_search_icon" data-bs-toggle="modal" data-bs-target="#modalSearch"><i
+                  class="bi bi-search"></i></a>
+            </div>
+
+            <button type="button" class="mr_menu_toggle wptb-element d-xl-none">
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Main Header -->
+
+  <!-- Mobile Responsive Menu -->
+  <div class="mr_menu" data-lenis-prevent>
+    <button type="button" class="mr_menu_close"><i class="bi bi-x-lg"></i></button>
+    <div class="logo"></div>
+    <h6>Menu</h6>
+    <div class="mr_navmenu"></div>
+  </div>
+
+  <div class="aside_info_wrapper" data-lenis-prevent>
+    <button class="aside_close">Close <i class="bi bi-x-lg"></i></button>
+    <div class="aside_logo logo">
+      <a href="index.html" class="light_logo"><img src="assets/img/logo-home.png" alt="logo"></a>
+      <a href="index.html" class="dark_logo"><img src="assets/img/logo-home.png" alt="logo"></a>
+    </div>
+    <div class="aside_info_inner">
+      <div class="wptb-instagram--gallery">
+        <div class="wptb-item--inner d-flex align-items-center justify-content-center flex-wrap">
+          <div class="wptb-item">
+            <div class="wptb-item--image">
+              <img src="assets/img/instagram/6.jpg" alt="img">
+            </div>
+          </div>
+
+          <div class="wptb-item">
+            <div class="wptb-item--image">
+              <img src="assets/img/instagram/7.jpg" alt="img">
+            </div>
+          </div>
+
+          <div class="wptb-item">
+            <div class="wptb-item--image">
+              <img src="assets/img/instagram/8.jpg" alt="img">
+            </div>
+          </div>
+
+          <div class="wptb-item">
+            <div class="wptb-item--image">
+              <img src="assets/img/instagram/9.jpg" alt="img">
+            </div>
+          </div>
+
+          <div class="wptb-item">
+            <div class="wptb-item--image">
+              <img src="assets/img/instagram/10.jpg" alt="img">
+            </div>
+          </div>
+
+          <div class="wptb-item">
+            <div class="wptb-item--image">
+              <img src="assets/img/instagram/11.jpg" alt="img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Main Wrapper-->
+  <main class="wrapper">
+    <!-- Slider Section -->
+    <section class="wptb-slider style1">
+      <div class="swiper-container wptb-swiper-slider-one">
+        <!-- swiper slides -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="wptb-slider--item">
+              <div class="wptb-slider--content">
+                <div class="wptb-slider--image">
+                  <img src="assets/img/bg.png" class="ttt" alt="img" />
+
+                  <div class="wptb-slider--inner">
+                    <div class="wptb-heading">
+                      <img src="assets/img/logo-home.png" class="logo-home" alt="" srcset="" />
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div class="header_search wptb-element d-xl-none">
-                <a
-                  href="#"
-                  class="modal_search_icon"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalSearch"
-                  ><i class="bi bi-search"></i
-                ></a>
-              </div>
-
-              <button
-                type="button"
-                class="mr_menu_toggle wptb-element d-xl-none">
-                <i class="bi bi-list"></i>
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <!-- End Main Header -->
 
-    <!-- Mobile Responsive Menu -->
-    <div class="mr_menu" data-lenis-prevent>
-      <button type="button" class="mr_menu_close">
-        <i class="bi bi-x-lg"></i>
-      </button>
-      <div class="logo"></div>
-      <!-- Keep this div empty. Logo will come here by JavaScript -->
-
-      <h6>Menu</h6>
-      <div class="mr_navmenu"></div>
-      <!-- Keep this div empty. Menu will come here by JavaScript -->
-
-      <h6>Contact Us</h6>
-      <div class="wptb-icon-box1 style2">
-        <div class="wptb-item--inner flex-start">
-          <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
-          <div class="wptb-item--holder">
-            <p class="wptb-item--description">
-              <a href="mailto:kimocare@gmail.com">kimocare@gmail.com</a>
-            </p>
+      <div class="wptb-left-pane justify-content-center justify-content-xl-between">
+        <div class="aside_open d-none d-xl-flex">
+          <div class="aside-open--inner">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
+        </div>
+
+        <!-- pagination dots -->
+        <div class="wptb-swiper-dots">
+          <div class="swiper-pagination"></div>
         </div>
       </div>
 
-      <div class="wptb-icon-box1 style2">
-        <div class="wptb-item--inner flex-start">
-          <div class="wptb-item--icon"><i class="bi bi-geo-alt"></i></div>
-          <div class="wptb-item--holder">
-            <p class="wptb-item--description">
-              <a href="contact-1.html">28 Street, New York, USA</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="wptb-icon-box1 style2">
-        <div class="wptb-item--inner flex-start">
-          <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
-          <div class="wptb-item--holder">
-            <p class="wptb-item--description">
-              <a href="tel:+98765432122811">(+987) 654 321 228 11</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <h6>Find Our Page</h6>
-      <div class="social-box">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/"
-              ><i class="bi bi-facebook"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/"
-              ><i class="bi bi-instagram"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.behance.com/"><i class="bi bi-behance"></i></a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="aside_info_wrapper" data-lenis-prevent>
-      <button class="aside_close">Close <i class="bi bi-x-lg"></i></button>
-
-      <div class="aside_logo logo">
-        <a href="index.html" class="light_logo"
-          ><img src="assets/img/logo-light.png" alt="logo"
-        /></a>
-        <a href="index.html" class="dark_logo"
-          ><img src="assets/img/logo.png" alt="logo"
-        /></a>
-      </div>
-
-      <div class="aside_info_inner">
-        <h6>// Instagram</h6>
-        <div class="insta-logo">
-          <i class="bi bi-instagram"></i> studio_kimono
-        </div>
-        <div class="wptb-instagram--gallery">
-          <div
-            class="wptb-item--inner d-flex align-items-center justify-content-center flex-wrap">
-            <div class="wptb-item">
-              <div class="wptb-item--image">
-                <img src="assets/img/instagram/6.jpg" alt="img" />
-              </div>
-            </div>
-
-            <div class="wptb-item">
-              <div class="wptb-item--image">
-                <img src="assets/img/instagram/7.jpg" alt="img" />
-              </div>
-            </div>
-
-            <div class="wptb-item">
-              <div class="wptb-item--image">
-                <img src="assets/img/instagram/8.jpg" alt="img" />
-              </div>
-            </div>
-
-            <div class="wptb-item">
-              <div class="wptb-item--image">
-                <img src="assets/img/instagram/9.jpg" alt="img" />
-              </div>
-            </div>
-
-            <div class="wptb-item">
-              <div class="wptb-item--image">
-                <img src="assets/img/instagram/10.jpg" alt="img" />
-              </div>
-            </div>
-
-            <div class="wptb-item">
-              <div class="wptb-item--image">
-                <img src="assets/img/instagram/11.jpg" alt="img" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="wptb-icon-box1 style2">
-          <div class="wptb-item--inner flex-start">
-            <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
-            <div class="wptb-item--holder">
-              <p class="wptb-item--description">
-                <a href="mailto:kimocare@gmail.com">kimocare@gmail.com</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="wptb-icon-box1 style2">
-          <div class="wptb-item--inner flex-start">
-            <div class="wptb-item--icon"><i class="bi bi-geo-alt"></i></div>
-            <div class="wptb-item--holder">
-              <p class="wptb-item--description">
-                <a href="contact-1.html">28 Street, New York, USA</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="wptb-icon-box1 style2">
-          <div class="wptb-item--inner flex-start">
-            <div class="wptb-item--icon"><i class="bi bi-envelope"></i></div>
-            <div class="wptb-item--holder">
-              <p class="wptb-item--description">
-                <a href="tel:+98765432122811">(+987) 654 321 228 11</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <h6>// Follow Us</h6>
-        <div class="social-box style-square">
+      <!-- Right Pane -->
+      <div class="wptb-right-pane">
+        <div class="social-box">
           <ul>
             <li>
-              <a href="https://www.facebook.com/"
-                ><i class="bi bi-facebook"></i
-              ></a>
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/"
-                ><i class="bi bi-instagram"></i
-              ></a>
+              <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/"
-                ><i class="bi bi-linkedin"></i
-              ></a>
+              <a href="https://www.youtube.com/">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
             </li>
             <li>
-              <a href="https://www.behance.com/"
-                ><i class="bi bi-behance"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/"
-                ><i class="bi bi-youtube"></i
-              ></a>
+              <a href="https://www.dribbble.com/">
+                <i class="fa-brands fa-dribbble"></i>
+              </a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
-
-    <!-- Modal Search -->
-    <div class="search-modal">
-      <div class="modal fade" id="modalSearch">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="search_overlay">
-              <form class="credential-form" method="post">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    name="search"
-                    class="keyword form-control"
-                    placeholder="Search Here" />
-                </div>
-                <button type="submit" class="btn-search">
-                  <span class="text-first">
-                    <i class="bi bi-arrow-right"></i>
-                  </span>
-                </button>
-              </form>
-            </div>
-          </div>
+      <div class="container">
+        <div class="counter">
+          <ul>
+            <li><span id="dayss"></span>days</li>
+            <li><span id="hourss"></span>Hours</li>
+            <li><span id="minutess"></span>Minutes</li>
+            <li><span id="secondss"></span>Seconds</li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Main Wrapper-->
-    <main class="wrapper">
-      <!-- Slider Section -->
-      <section class="wptb-slider style1">
-        <div class="swiper-container wptb-swiper-slider-one">
-          <!-- swiper slides -->
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="wptb-slider--item">
-                <div class="wptb-slider--content">
-                  <div class="wptb-slider--image">
-                    <img src="assets/img/bg.png" class="ttt" alt="img" />
-
-                    <div class="wptb-slider--inner">
-                      <div class="wptb-heading">
-                        <img
-                          src="assets/img/logo-home.png"
-                          class="logo-home"
-                          alt=""
-                          srcset="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="wptb-left-pane justify-content-center justify-content-xl-between">
-          <div class="aside_open d-none d-xl-flex">
-            <div class="aside-open--inner">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-
-          <!-- pagination dots -->
-          <div class="wptb-swiper-dots">
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-
-        <!-- Right Pane -->
-        <div class="wptb-right-pane">
-          <div class="social-box">
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/"
-                  ><i class="fa-brands fa-facebook-f"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/">
-                  <i class="fa-brands fa-youtube"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.dribbble.com/">
-                  <i class="fa-brands fa-dribbble"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="container">
-          <div class="counter">
-            <ul>
-              <li><span id="dayss"></span>days</li>
-              <li><span id="hourss"></span>Hours</li>
-              <li><span id="minutess"></span>Minutes</li>
-              <li><span id="secondss"></span>Seconds</li>
-            </ul>
-          </div>
-        </div>
-
-        <a class="btn btn-two hello-button white-opacity creative" href="#">
-          <span class="btn-wrap">
-            <span class="text-first">Register Now</span>
-            <span class="text-second">
-              <i class="bi bi-arrow-up-right"></i>
-              <i class="bi bi-arrow-up-right"></i>
-            </span>
+      <a class="btn btn-two hello-button white-opacity creative" href="#">
+        <span class="btn-wrap">
+          <span class="text-first">Register Now</span>
+          <span class="text-second">
+            <i class="bi bi-arrow-up-right"></i>
+            <i class="bi bi-arrow-up-right"></i>
           </span>
-        </a>
-      </section>
-      <div class="container mr-top-100">
-        <section class="wptb-about-two bg-transparent pt-0">
-          <div class="container">
-            <div class="wptb-heading">
-              <div class="wptb-item--inner">
-                <div class="row align-items-center">
-                  <div class="col-lg-7">
-                    <h6 class="wptb-item--subtitle">
-                      <span>01 //</span> About us
-                    </h6>
-                    <h1 class="wptb-item--title">
-                      Welcome to Nirman 4.0:  <span>Where Innovation Meets Transformation</span>
-                      
-                    </h1>
-                  </div>
-                  <div class="col-lg-5 text-lg-end">
-                    <div class="wptb-item--button">
-                      <a
-                        href="#"
-                        class="btn btn-two creative text-uppercase">
-                        <span class="btn-wrap">
-                          <span class="text-first">Register Now</span>
-                          <span class="text-second"
-                            ><i class="bi bi-arrow-up-right"></i
-                          ></span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </span>
+      </a>
 
-            <div class="row">
-              <div class="col-md-6">
-                <div class="wptb-image-single wow fadeInUp">
-                  <div class="wptb-item--inner">
-                    <div class="wptb-item--image position-relative">
-                      <img src="assets/img/own/4.png" alt="img" />
-
-                      <div class="wptb-item--button round-button">
-                        
-                      </div>
-                    </div>
-                  </div>
-
-                 
-                </div>
-              </div>
-
-              <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
-                <div class="wptb-about--text ps-md-5">
-                
-                  <p>
-                    Nirman 3rd Edition, hosted by Silicon Innovation and Promotion Cell, is an annual inter-college tech fest that unites over 1000 tech enthusiasts from across the nation. As the third iteration of this vibrant event, Nirman 3rd Edition is set to be a weekend filled with cutting-edge technology, innovation, and collaboration.
-
-Whether you’re an experienced coder or just starting out, Nirman welcomes students from all technical and management backgrounds to participate in a hybrid experience that emphasizes learning by doing. Through workshops, hackathons, and tech challenges, participants will have the opportunity to gain hands-on experience, grow their skillsets, and connect with fellow innovators.
-
-By supporting Nirman 3rd Edition, you help us provide resources, rewards, meals, and an unforgettable experience for our participants, empowering the next generation of thinkers and creators. Join us on this journey to make technology accessible, exciting, and transformative.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="divider-line-hr mr-top-100"></div>
-      
-       
-      <div class="container mr-top-100">
-        <section class="wptb-about-two bg-transparent pt-0">
-          <div class="container">
-            <div class="wptb-heading">
-              <div class="wptb-item--inner">
-                <div class="row align-items-center">
-                  <div class="col-lg-7">
-                    <h6 class="wptb-item--subtitle">
-                      <span>02 //</span> Teaser
-                    </h6>
-                    <h1 class="wptb-item--title">
-                      Unveiling the Journey:  <span>Watch the Official Trailer</span>
-                     
-                    </h1>
-                  </div>
-                  <div class="col-lg-5 text-lg-end">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="wptb-image-single wow fadeInUp">
-                  <div class="wptb-item--inner">
-                    <div class="wptb-item--image position-relative">
-                      <img src="assets/img/own/5.jpg" alt="img" />
-
-                      <div class="wptb-item--button round-button">
-                        <a class="btn btn-two" href="about.html">
-                          <span class="btn-wrap">
-                            <span class="text-first">Explore Us</span>
-                            <span class="text-second">
-                              <i class="bi bi-arrow-up-right"></i>
-                              <i class="bi bi-arrow-up-right"></i>
-                            </span>
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                 
-                </div>
-              </div>
-
-              <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
-                <div class="wptb-about--text ps-md-5">
-                 
-                  <p>
-                    Step into the heart of Nirman 4.0, where innovation, creativity, and collaboration come together like never before. This year, Nirman 4.0 invites you on an exhilarating journey to explore the limits of technology and artistry. From cutting-edge tech projects to mesmerizing designs, the teaser unveils the pulse of this year’s theme, 'Avatar' – a celebration of transformation, resilience, and boundless potential.
-
-Join us in this sneak peek as we set the stage for an experience that promises to redefine what's possible. Prepare to be inspired, amazed, and ready to be part of an unforgettable chapter at Nirman 4.0!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div class="divider-line-hr mr-top-100"></div>
-
-      <!-- Services -->
-      <section class="wptb-services-one bg-image-2">
-        <div class="wptb-item-layer both-version">
-          <img src="assets/img/more/texture-2.png" alt="" />
-          <img src="assets/img/more/texture-2-light.png" alt="" />
-        </div>
+    </section>
+    <div class="container mr-top-100">
+      <div class="nn"></div>
+      <section class="wptb-about-two bg-transparent pt-0">
         <div class="container">
           <div class="wptb-heading">
             <div class="wptb-item--inner">
               <div class="row align-items-center">
                 <div class="col-lg-7">
                   <h6 class="wptb-item--subtitle">
-                    <span>03 //</span> TimeLine
+                    <span>01 //</span> About us
                   </h6>
                   <h1 class="wptb-item--title">
-                    The Evolution Timeline:  <br>
-                    <span> Milestones of the Avatar Journey </span>
+                    Welcome to Nirman 4.0: <span>Where Innovation Meets Transformation</span>
+
                   </h1>
                 </div>
                 <div class="col-lg-5 text-lg-end">
                   <div class="wptb-item--button">
-                    <a
-                      href="#"
-                      class="btn btn-two creative text-uppercase">
+                    <a href="#" class="btn btn-two creative text-uppercase">
                       <span class="btn-wrap">
-                        <span class="text-first">Download</span>
-                        <span class="text-second"
-                          ><i class="bi bi-arrow-up-right"></i
-                        ></span>
+                        <span class="text-first">Register Now</span>
+                        <span class="text-second"><i class="bi bi-arrow-up-right"></i></span>
                       </span>
                     </a>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
 
-          <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="wptb-image-single wow fadeInUp">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image position-relative">
+                    <img src="assets/img/own/4.png" alt="img" />
 
-            <div class="timeline-block timeline-block-right">
-              
-               <div class="marker"></div>
-               
-               <div class="timeline-content">
-                  <h3>Registration Starts</h3>
-                  <span>15th Dec 2023 (ONLINE)</span>
-                  <p>Save the date! Registration opens on December 15th. Join us for an unforgettable experience filled with tech insights, innovation, and networking. Secure your spot and be part of the excitement!</p>
-               </div>
-               
-            </div>
-         
-            <div class="timeline-block timeline-block-left">
-             
-               <div class="marker"></div>
-               
-               <div class="timeline-content">
-                  <h3>Merchandise Sale Starts!!</h3>
-                  <span>25th Dec 2023 (ONLINE)</span>
-                  <p>Style Unleashed: Dive into Our Exclusive Sale! Elevate your wardrobe with trendy T-shirts, cozy Hoodies, and sleek Bottles. Don't miss out – Shop the Cool Now!</p>
-               </div>
-            </div>
-         
-            <div class="timeline-block timeline-block-right">
-              
-               <div class="marker"></div>
-               <div class="timeline-content">
-                  <h3>Registrations Closed</h3>
-                  <span>10th Jan 2024 (ONLINE)</span>
-                  <p>Last Call Alert! Registration for All Events Closing Soon. Secure Your Spot Now and Don't Miss Out on the Excitement. Join Us for a Weekend of Innovation and Fun!</p>
-               </div>
-            </div>
-         
-            <div class="timeline-block timeline-block-left">
-               <div class="marker"></div>
-               <div class="timeline-content">
-                  <h3>End of Merchandise sale </h3>
-                  <span>15th Jan 2024 (ONLINE)</span>
-                  <p>Hurry! The Final Call: Booking for Exclusive Merchandise Closes Soon. Don't Miss Out on the Trendy T-shirts, Hoodies, and Bottles. Grab Yours Before It's Too Late!</p>
-               </div>
-            </div>
-         
-            <div class="timeline-block timeline-block-right">
-               <div class="marker"></div>
-               <div class="timeline-content">
-                  <h3>SHORTLISTING PARTICIPANT GROUPS</h3>
-                  <span>31st Jan 2024 (ONLINE)</span>
-                  <p>Get ready for the next step! Shortlisting based on participation numbers is underway. Keep an eye on your inbox, selected groups will soon receive a confirmation email for their registered events</p>
-               </div>
-            </div>
-            <div class="timeline-block  timeline-block-left">
-              <div class="marker"></div>
-              <div class="timeline-content">
-                 <h3>Welcome Ceremony,
-                  Robotics, Ideate Prelims – Unveil the Excitement</h3>
-                 <span>19th Feb 2024 (SIT,BBSR)</span>
-                 <p>Kicking off the grand event! Join us for the Welcome Ceremony, followed by the excitement of Robotics Events and the thrilling Ideate Preliminary stage. It's an event-packed journey you won't want to miss!</p>
+                    <div class="wptb-item--button round-button">
+
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
-           </div>
-        
-           <div class="timeline-block timeline-block-right">
-              <div class="marker"></div>
-              <div class="timeline-content">
-                 <h3>Ideate, Hacknation</h3>
-                 <span>20th Feb 2024 (SIT,BBSR)</span>
-                 <p>Mark your calendars! The Ideate Final kicks off the first half, paving the way for an exhilarating second half with the Hacknation event. Brace yourselves for back-to-back innovation and excitement!</p>
+            </div>
+
+            <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+              <div class="wptb-about--text ps-md-5">
+
+                <p>
+                  Nirman 3rd Edition, hosted by Silicon Innovation and Promotion Cell, is an annual inter-college tech
+                  fest that unites over 1000 tech enthusiasts from across the nation. As the third iteration of this
+                  vibrant event, Nirman 3rd Edition is set to be a weekend filled with cutting-edge technology,
+                  innovation, and collaboration.
+
+                  Whether you’re an experienced coder or just starting out, Nirman welcomes students from all technical
+                  and management backgrounds to participate in a hybrid experience that emphasizes learning by doing.
+                  Through workshops, hackathons, and tech challenges, participants will have the opportunity to gain
+                  hands-on experience, grow their skillsets, and connect with fellow innovators.
+
+                  By supporting Nirman 3rd Edition, you help us provide resources, rewards, meals, and an unforgettable
+                  experience for our participants, empowering the next generation of thinkers and creators. Join us on
+                  this journey to make technology accessible, exciting, and transformative.
+                </p>
               </div>
-           </div>
-        
-           <div class="timeline-block  timeline-block-left">
-              <div class="marker"></div>
-              <div class="timeline-content">
-                 <h3>Closing Ceremony</h3>
-                 <span>21th Feb 2024 (SIT,BBSR)</span>
-                 <p>Countdown to innovation! The 12-hour Hackathon concludes, leading to an electrifying Prize Distribution and the Grand Closing Ceremony. Join us as we celebrate excellence and creativity!</p>
-              </div>
-           </div>
+            </div>
+          </div>
         </div>
       </section>
-      <div class="divider-line-hr"></div>
-      <section class="wptb-team-one">
-        <div class="container">
-          <div class="wptb-heading">
-            <div class="wptb-item--inner">
-              <div class="row">
-                <div class="col-lg-6">
-                  <h6 class="wptb-item--subtitle">
-                    <span>04 //</span> Gallery
-                  </h6>
-                  <h1 class="wptb-item--title mb-lg-0">Explore the Gallery:</h1>
-                </div>
+    </div>
+    <div class="divider-line-hr mr-top-100"></div>
 
-                <div class="col-lg-6">
-                  <p class="wptb-item--description">
-                    "I see you." -
-                    <span>Embrace unseen wonders and </span> explore creations
-                    that push the boundaries of imagination.
-                  </p>
 
-                  <!-- Swiper Navigation -->
-                  <div class="wptb-swiper-navigation style1">
-                    <div class="wptb-swiper-arrow swiper-button-prev"></div>
-                    <div class="wptb-swiper-arrow swiper-button-next"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-container swiper-team">
-            <div class="swiper-wrapper">
-              <!-- Team Block -->
-              <div class="swiper-slide">
-                <div class="wptb-team-grid1">
-                  <div class="wptb-item--inner">
-                    <div class="wptb-item--image">
-                      <img src="assets/img/team/1.jpg" alt="img" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Team Block -->
-              <div class="swiper-slide">
-                <div class="wptb-team-grid1">
-                  <div class="wptb-item--inner">
-                    <div class="wptb-item--image">
-                      <img src="assets/img/team/2.jpg" alt="img" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Team Block -->
-              <div class="swiper-slide">
-                <div class="wptb-team-grid1">
-                  <div class="wptb-item--inner">
-                    <div class="wptb-item--image">
-                      <img src="assets/img/team/3.jpg" alt="img" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Team Block -->
-              <div class="swiper-slide">
-                <div class="wptb-team-grid1">
-                  <div class="wptb-item--inner">
-                    <div class="wptb-item--image">
-                      <img src="assets/img/team/4.jpg" alt="img" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Team Block -->
-              <div class="swiper-slide">
-                <div class="wptb-team-grid1">
-                  <div class="wptb-item--inner">
-                    <div class="wptb-item--image">
-                      <img src="assets/img/team/5.jpg" alt="img" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Team Block -->
-              <div class="swiper-slide">
-                <div class="wptb-team-grid1">
-                  <div class="wptb-item--inner">
-                    <div class="wptb-item--image">
-                      <img src="assets/img/team/6.jpg" alt="img" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br /><br /><br />
-        <div class="divider-line-hr"></div>
-      </section>
-
-      <!-- Text Marquee -->
-      <div class="wptb-heading" style="margin-bottom: -120px">
-        <div class="wptb-item--inner">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <h6 class="wptb-item--subtitle"><span>05 //</span> Sponsors</h6>
-              <h1 class="wptb-item--title">
-                Empowered by <br />
-                <span>Our Sponsors</span>
-              </h1>
-            </div>
-            <div class="col-lg-6">
-              <p class="wptb-item--description">
-                <span
-                  >Our strength lies in unity, where diverse visions ignite
-                  innovation.Together,<br />
-                </span>
-                we shape extraordinary worlds and transform ideas into reality.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="wptb-marquee" style="margin-top: -50px">
-          <div class="wptb-text-marquee1 wptb-slide-to-left">
-            <div class="wptb-item--container">
-              <div class="wptb-item--inner">
-                <img src="assets/img/own/logo/raylight.png" alt="" srcset="" />
-                <img src="assets/img/own/logo/raylight.png" alt="" srcset="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="divider-line-hr"></div>
-
-      <!-- Our Projects -->
-
-      <!-- Blog Grid -->
-      <section class="wptb-blog-grid-one pb-0">
+    <div class="container mr-top-100">
+      <section class="wptb-about-two bg-transparent pt-0">
         <div class="container">
           <div class="wptb-heading">
             <div class="wptb-item--inner">
               <div class="row align-items-center">
-                <div class="col-lg-6">
-                  <h6 class="wptb-item--subtitle"><span>06 //</span> Faq</h6>
-                  <h1 class="wptb-item--title mb-0">
-                    FAQs: Your Queries,<br />
-                    <span>Our Insights</span>
+                <div class="col-lg-7">
+                  <h6 class="wptb-item--subtitle">
+                    <span>02 //</span> Teaser
+                  </h6>
+                  <h1 class="wptb-item--title">
+                    Unveiling the Journey: <span>Watch the Official Trailer</span>
+
                   </h1>
                 </div>
+                <div class="col-lg-5 text-lg-end">
 
-                <div class="col-lg-6">
-                  <p class="wptb-item--description">
-                    <span>
-                      Explore the answers that empower your experience,
-                    </span>
-                    guiding you through every aspect of our event. Together,
-                    we'll uncover insights to enhance your journey and
-                    engagement.
-                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <section
-            class="wptb-faq-one bg-image pb-0"
-            style="background-image: url('../assets/img/background/bg-8.jpg')">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="wptb-accordion wptb-accordion2 wow fadeInUp">
-                    <div class="wptb--item active">
-                      <h6 class="wptb-item-title">
-                        <span>I am a beginner, can I participate ?</span>
-                        <i class="plus bi bi-plus"></i>
-                        <i class="minus bi bi-dash"></i>
-                      </h6>
-                      <div class="wptb-item--content">
-                        You should register for Nirman because this event is all
-                        about getting that experience! The events provide a
-                        great environment to get started.
-                      </div>
-                    </div>
 
-                    <div class="wptb--item">
-                      <h6 class="wptb-item-title">
-                        <span>Can I participate in all of these events ?</span>
-                        <i class="plus bi bi-plus"></i>
-                        <i class="minus bi bi-dash"></i>
-                      </h6>
-                      <div class="wptb-item--content">
-                        You are welcome to participate in any or all of these
-                        events. If you want to participate in only one, you are
-                        able to do so. These events include people with a
-                        variety of skill levels and abilities. Teams of 3-4 are
-                        required.
-                      </div>
-                    </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="wptb-image-single wow fadeInUp">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image position-relative">
+                    <img src="assets/img/own/5.jpg" alt="img" />
 
-                    <div class="wptb--item">
-                      <h6 class="wptb-item-title">
-                        <span>What is a hackathon ?</span>
-                        <i class="plus bi bi-plus"></i>
-                        <i class="minus bi bi-dash"></i>
-                      </h6>
-                      <div class="wptb-item--content">
-                        Hackathons allow students to come together to create
-                        tech projects in a collaborative environment. Throughout
-                        the event, teams of students will brainstorm, design,
-                        code, and create amazing projects.
-                      </div>
-                    </div>
-                    <div class="wptb--item active">
-                      <h6 class="wptb-item-title">
-                        <span>Is Nirman an offline or online event ?</span>
-                        <i class="plus bi bi-plus"></i>
-                        <i class="minus bi bi-dash"></i>
-                      </h6>
-                      <div class="wptb-item--content">
-                        This will be an offline/In-person event, held on the
-                        campus of Silicon Institute of Technology, Bhubaneswar.
-                      </div>
-                    </div>
-
-                    <div class="wptb--item">
-                      <h6 class="wptb-item-title">
-                        <span
-                          >Can anyone outside Silicon Institute of Technology
-                          participate in nirman ?
+                    <div class="wptb-item--button round-button">
+                      <a class="btn btn-two" href="about.html">
+                        <span class="btn-wrap">
+                          <span class="text-first">Explore Us</span>
+                          <span class="text-second">
+                            <i class="bi bi-arrow-up-right"></i>
+                            <i class="bi bi-arrow-up-right"></i>
+                          </span>
                         </span>
-                        <i class="plus bi bi-plus"></i>
-                        <i class="minus bi bi-dash"></i>
-                      </h6>
-                      <div class="wptb-item--content">
-                        Everyone from any institute in India can participate in
-                        this event.
-                      </div>
-                    </div>
-
-                    <div class="wptb--item">
-                      <h6 class="wptb-item-title">
-                        <span>What is the registration fee ?</span>
-                        <i class="plus bi bi-plus"></i>
-                        <i class="minus bi bi-dash"></i>
-                      </h6>
-                      <div class="wptb-item--content">
-                        The registration fees for Hacknation is ₹100 per member
-                        and for rest of the events ₹50 per member.
-                      </div>
-                    </div>
-                    <div class="wptb--item">
-                      <h6 class="wptb-item-title">
-                        <span>Where can I see Event details?</span>
-                        <i class="plus bi bi-plus"></i>
-                        <i class="minus bi bi-dash"></i>
-                      </h6>
-                      <div class="wptb-item--content">
-                        Kindly visit the events page and click on the view
-                        details option.
-                      </div>
-                    </div>
-                    <div class="wptb--item">
-                      <h6 class="wptb-item-title">
-                        <span>I have more querries</span>
-                        <i class="plus bi bi-plus"></i>
-                        <i class="minus bi bi-dash"></i>
-                      </h6>
-                      <div class="wptb-item--content">
-                        No problem! Contact us at nirman@silicon.ac.in and we'll
-                        get in touch with you shortly :)
-                      </div>
-                    </div>
-                    <br><br>
-                  </div>
-                </div>
-
-                <div class="col-lg-6">
-                  <div class="wptb-image-single wow fadeInUp">
-                    <div class="wptb-item--inner">
-                      <div class="wptb-item--image">
-                        <img src="assets/img/own/3.png" alt="img" />
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
+
+
               </div>
             </div>
-          </section>
+
+            <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+              <div class="wptb-about--text ps-md-5">
+
+                <p>
+                  Step into the heart of Nirman 4.0, where innovation, creativity, and collaboration come together like
+                  never before. This year, Nirman 4.0 invites you on an exhilarating journey to explore the limits of
+                  technology and artistry. From cutting-edge tech projects to mesmerizing designs, the teaser unveils
+                  the pulse of this year’s theme, 'Avatar' – a celebration of transformation, resilience, and boundless
+                  potential.
+
+                  Join us in this sneak peek as we set the stage for an experience that promises to redefine what's
+                  possible. Prepare to be inspired, amazed, and ready to be part of an unforgettable chapter at Nirman
+                  4.0!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+    </div>
 
-      <!-- Contact -->
-    </main>
-    <!-- Footer -->
-    <footer
-      class="footer style1 bg-image-2"
-      style="background-image: url('assets/img/background/bg-5_2.png')">
-      <div class="footer-top">
-        <div class="container">
-          <div class="footer--inner">
-            <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0"></div>
+    <div class="divider-line-hr mr-top-100"></div>
 
-              <div class="col-lg-4 col-md-4 mb-5 mb-md-0 order-1 order-md-0">
-                <div class="footer-widget text-center">
-                  <div class="logo mr-bottom-55">
-                    <a href="index.html" class=""
-                      ><img src="assets/img/logo-home.png" alt="logo"
-                    /></a>
-                  </div>
-                  <h3 class="wptb-item--title">
-                    <span>Silicon University</span>
-                  </h3>
-                  <h6 class="widget-title">
-                    Bhubaneswar, Odisha,India <br />
-                    nirman@silicon.ac.in
-                  </h6>
-                  <div class="social-box">
-                    <ul>
-                      <li>
-                        <a
-                          href="https://www.facebook.com/"
-                          class="bi bi-facebook"></a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.instagram.com/"
-                          class="bi bi-instagram"></a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.linkedin.com/"
-                          class="bi bi-linkedin"></a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.behance.com/"
-                          class="bi bi-behance"></a>
-                      </li>
-                    </ul>
-                  </div>
+    <!-- Services -->
+    <section class="wptb-services-one bg-image-2" id="timeline">
+      <div class="wptb-item-layer both-version">
+        <img src="assets/img/more/texture-2.png" alt="" />
+        <img src="assets/img/more/texture-2-light.png" alt="" />
+      </div>
+      <div class="container">
+        <div class="wptb-heading">
+          <div class="wptb-item--inner">
+            <div class="row align-items-center">
+              <div class="col-lg-7">
+                <h6 class="wptb-item--subtitle">
+                  <span>03 //</span> TimeLine
+                </h6>
+                <h1 class="wptb-item--title">
+                  The Evolution Timeline: <br>
+                  <span> Milestones of the Avatar Journey </span>
+                </h1>
+              </div>
+              <div class="col-lg-5 text-lg-end">
+                <div class="wptb-item--button">
+                  <a href="#" class="btn btn-two creative text-uppercase">
+                    <span class="btn-wrap">
+                      <span class="text-first">Download</span>
+                      <span class="text-second"><i class="bi bi-arrow-up-right"></i></span>
+                    </span>
+                  </a>
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0"></div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Footer Bottom Part -->
-      <div class="footer-bottom" style="margin-top: -80px">
         <div class="container">
-          <div class="footer-bottom-inner">
-            <div class="copyright">
-              <p>
-                <a href="#">RAYLIGHT SOFTWARES</a>
+
+          <div class="timeline-block timeline-block-right">
+
+            <div class="marker"></div>
+
+            <div class="timeline-content">
+              <h3>Registration Starts</h3>
+              <span>15th Dec 2023 (ONLINE)</span>
+              <p>Save the date! Registration opens on December 15th. Join us for an unforgettable experience filled with
+                tech insights, innovation, and networking. Secure your spot and be part of the excitement!</p>
+            </div>
+
+          </div>
+
+          <div class="timeline-block timeline-block-left">
+
+            <div class="marker"></div>
+
+            <div class="timeline-content">
+              <h3>Merchandise Sale Starts!!</h3>
+              <span>25th Dec 2023 (ONLINE)</span>
+              <p>Style Unleashed: Dive into Our Exclusive Sale! Elevate your wardrobe with trendy T-shirts, cozy
+                Hoodies, and sleek Bottles. Don't miss out – Shop the Cool Now!</p>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>Registrations Closed</h3>
+              <span>10th Jan 2024 (ONLINE)</span>
+              <p>Last Call Alert! Registration for All Events Closing Soon. Secure Your Spot Now and Don't Miss Out on
+                the Excitement. Join Us for a Weekend of Innovation and Fun!</p>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-left">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>End of Merchandise sale </h3>
+              <span>15th Jan 2024 (ONLINE)</span>
+              <p>Hurry! The Final Call: Booking for Exclusive Merchandise Closes Soon. Don't Miss Out on the Trendy
+                T-shirts, Hoodies, and Bottles. Grab Yours Before It's Too Late!</p>
+            </div>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>SHORTLISTING PARTICIPANT GROUPS</h3>
+              <span>31st Jan 2024 (ONLINE)</span>
+              <p>Get ready for the next step! Shortlisting based on participation numbers is underway. Keep an eye on
+                your inbox, selected groups will soon receive a confirmation email for their registered events</p>
+            </div>
+          </div>
+          <div class="timeline-block  timeline-block-left">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>Welcome Ceremony,
+                Robotics, Ideate Prelims – Unveil the Excitement</h3>
+              <span>19th Feb 2024 (SIT,BBSR)</span>
+              <p>Kicking off the grand event! Join us for the Welcome Ceremony, followed by the excitement of Robotics
+                Events and the thrilling Ideate Preliminary stage. It's an event-packed journey you won't want to miss!
               </p>
             </div>
-            <div class="copyright">
-              <p>
-                <a href="#">Copyright © 2024 SIPC</a>
-              </p>
+          </div>
+
+          <div class="timeline-block timeline-block-right">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>Ideate, Hacknation</h3>
+              <span>20th Feb 2024 (SIT,BBSR)</span>
+              <p>Mark your calendars! The Ideate Final kicks off the first half, paving the way for an exhilarating
+                second half with the Hacknation event. Brace yourselves for back-to-back innovation and excitement!</p>
+            </div>
+          </div>
+
+          <div class="timeline-block  timeline-block-left">
+            <div class="marker"></div>
+            <div class="timeline-content">
+              <h3>Closing Ceremony</h3>
+              <span>21th Feb 2024 (SIT,BBSR)</span>
+              <p>Countdown to innovation! The 12-hour Hackathon concludes, leading to an electrifying Prize Distribution
+                and the Grand Closing Ceremony. Join us as we celebrate excellence and creativity!</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <div class="divider-line-hr"></div>
+    <section class="wptb-team-one">
+      <div class="container">
+        <div class="wptb-heading">
+          <div class="wptb-item--inner">
+            <div class="row">
+              <div class="col-lg-6">
+                <h6 class="wptb-item--subtitle">
+                  <span>04 //</span> Gallery
+                </h6>
+                <h1 class="wptb-item--title mb-lg-0">Explore the Gallery:</h1>
+              </div>
+
+              <div class="col-lg-6">
+                <p class="wptb-item--description">
+                  "I see you." -
+                  <span>Embrace unseen wonders and </span> explore creations
+                  that push the boundaries of imagination.
+                </p>
+
+                <!-- Swiper Navigation -->
+                <div class="wptb-swiper-navigation style1">
+                  <div class="wptb-swiper-arrow swiper-button-prev"></div>
+                  <div class="wptb-swiper-arrow swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-container swiper-team">
+          <div class="swiper-wrapper">
+            <!-- Team Block -->
+            <div class="swiper-slide">
+              <div class="wptb-team-grid1">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="assets/img/team/1.jpg" alt="img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="swiper-slide">
+              <div class="wptb-team-grid1">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="assets/img/team/2.jpg" alt="img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="swiper-slide">
+              <div class="wptb-team-grid1">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="assets/img/team/3.jpg" alt="img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="swiper-slide">
+              <div class="wptb-team-grid1">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="assets/img/team/4.jpg" alt="img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="swiper-slide">
+              <div class="wptb-team-grid1">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="assets/img/team/5.jpg" alt="img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Block -->
+            <div class="swiper-slide">
+              <div class="wptb-team-grid1">
+                <div class="wptb-item--inner">
+                  <div class="wptb-item--image">
+                    <img src="assets/img/team/6.jpg" alt="img" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+      <br /><br /><br />
+      <div class="divider-line-hr"></div>
+    </section>
 
-    <div class="totop">
-      <a href="#"><i class="bi bi-chevron-up"></i></a>
+    <!-- Text Marquee -->
+    <div class="wptb-heading" style="margin-bottom: -120px">
+      <div class="wptb-item--inner">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h6 class="wptb-item--subtitle"><span>05 //</span> Sponsors</h6>
+            <h1 class="wptb-item--title">
+              Empowered by <br />
+              <span>Our Sponsors</span>
+            </h1>
+          </div>
+          <div class="col-lg-6">
+            <p class="wptb-item--description">
+              <span>Our strength lies in unity, where diverse visions ignite
+                innovation.Together,<br />
+              </span>
+              we shape extraordinary worlds and transform ideas into reality.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="wptb-marquee" style="margin-top: -50px">
+        <div class="wptb-text-marquee1 wptb-slide-to-left">
+          <div class="wptb-item--container">
+            <div class="wptb-item--inner">
+              <img src="assets/img/own/logo/raylight.png" alt="" srcset="" />
+              <img src="assets/img/own/logo/raylight.png" alt="" srcset="" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Core JS -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <div class="divider-line-hr"></div>
 
-    <!-- Framework -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Our Projects -->
 
-    <!-- WOW Scroll Effect -->
-    <script src="plugins/wow/wow.min.js"></script>
+    <!-- Blog Grid -->
+    <section class="wptb-blog-grid-one pb-0" id="faq">
+      <div class="container">
+        <div class="wptb-heading">
+          <div class="wptb-item--inner">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <h6 class="wptb-item--subtitle"><span>06 //</span> Faq</h6>
+                <h1 class="wptb-item--title mb-0">
+                  FAQs: Your Queries,<br />
+                  <span>Our Insights</span>
+                </h1>
+              </div>
 
-    <!-- Swiper Slider -->
-    <script src="plugins/swiper/swiper-bundle.min.js"></script>
-    <script src="plugins/swiper/swiper-gl.min.js"></script>
+              <div class="col-lg-6">
+                <p class="wptb-item--description">
+                  <span>
+                    Explore the answers that empower your experience,
+                  </span>
+                  guiding you through every aspect of our event. Together,
+                  we'll uncover insights to enhance your journey and
+                  engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="wptb-faq-one bg-image pb-0" style="background-image: url('../assets/img/background/bg-8.jpg')">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="wptb-accordion wptb-accordion2 wow fadeInUp">
+                  <div class="wptb--item ">
+                    <h6 class="wptb-item-title">
+                      <span>I am a beginner, can I participate ?</span>
+                      <i class="plus bi bi-plus"></i>
+                      <i class="minus bi bi-dash"></i>
+                    </h6>
+                    <div class="wptb-item--content">
+                      You should register for Nirman because this event is all
+                      about getting that experience! The events provide a
+                      great environment to get started.
+                    </div>
+                  </div>
 
-    <!-- Odometer Counter -->
-    <script src="plugins/odometer/appear.js"></script>
-    <script src="plugins/odometer/odometer.js"></script>
+                  <div class="wptb--item">
+                    <h6 class="wptb-item-title">
+                      <span>Can I participate in all of these events ?</span>
+                      <i class="plus bi bi-plus"></i>
+                      <i class="minus bi bi-dash"></i>
+                    </h6>
+                    <div class="wptb-item--content">
+                      You are welcome to participate in any or all of these
+                      events. If you want to participate in only one, you are
+                      able to do so. These events include people with a
+                      variety of skill levels and abilities. Teams of 3-4 are
+                      required.
+                    </div>
+                  </div>
 
-    <!-- Projects -->
-    <script src="plugins/isotope/isotope.pkgd.min.js"></script>
-    <script src="plugins/isotope/imagesloaded.pkgd.min.js"></script>
+                  <div class="wptb--item">
+                    <h6 class="wptb-item-title">
+                      <span>What is a hackathon ?</span>
+                      <i class="plus bi bi-plus"></i>
+                      <i class="minus bi bi-dash"></i>
+                    </h6>
+                    <div class="wptb-item--content">
+                      Hackathons allow students to come together to create
+                      tech projects in a collaborative environment. Throughout
+                      the event, teams of students will brainstorm, design,
+                      code, and create amazing projects.
+                    </div>
+                  </div>
+                  <div class="wptb--item active">
+                    <h6 class="wptb-item-title">
+                      <span>Is Nirman an offline or online event ?</span>
+                      <i class="plus bi bi-plus"></i>
+                      <i class="minus bi bi-dash"></i>
+                    </h6>
+                    <div class="wptb-item--content">
+                      This will be an offline/In-person event, held on the
+                      campus of Silicon Institute of Technology, Bhubaneswar.
+                    </div>
+                  </div>
 
-    <script src="plugins/isotope/tilt.jquery.js"></script>
-    <script src="plugins/isotope/isotope-init.js"></script>
+                  <div class="wptb--item">
+                    <h6 class="wptb-item-title">
+                      <span>Can anyone outside Silicon Institute of Technology
+                        participate in nirman ?
+                      </span>
+                      <i class="plus bi bi-plus"></i>
+                      <i class="minus bi bi-dash"></i>
+                    </h6>
+                    <div class="wptb-item--content">
+                      Everyone from any institute in India can participate in
+                      this event.
+                    </div>
+                  </div>
 
-    <!-- Fancybox -->
-    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+                  <div class="wptb--item">
+                    <h6 class="wptb-item-title">
+                      <span>What is the registration fee ?</span>
+                      <i class="plus bi bi-plus"></i>
+                      <i class="minus bi bi-dash"></i>
+                    </h6>
+                    <div class="wptb-item--content">
+                      The registration fees for Hacknation is ₹100 per member
+                      and for rest of the events ₹50 per member.
+                    </div>
+                  </div>
+                  <div class="wptb--item">
+                    <h6 class="wptb-item-title">
+                      <span>Where can I see Event details?</span>
+                      <i class="plus bi bi-plus"></i>
+                      <i class="minus bi bi-dash"></i>
+                    </h6>
+                    <div class="wptb-item--content">
+                      Kindly visit the events page and click on the view
+                      details option.
+                    </div>
+                  </div>
+                  <div class="wptb--item">
+                    <h6 class="wptb-item-title">
+                      <span>I have more querries</span>
+                      <i class="plus bi bi-plus"></i>
+                      <i class="minus bi bi-dash"></i>
+                    </h6>
+                    <div class="wptb-item--content">
+                      No problem! Contact us at nirman@silicon.ac.in and we'll
+                      get in touch with you shortly :)
+                    </div>
+                  </div>
+                  <br><br>
+                </div>
+              </div>
 
-    <!-- Flatpickr -->
-    <script src="plugins/flatpickr/flatpickr.min.js"></script>
+              <div class="col-lg-6">
+                <div class="wptb-image-single wow fadeInUp">
+                  <div class="wptb-item--inner">
+                    <div class="wptb-item--image">
+                      <img src="assets/img/own/3.png" alt="img" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
 
-    <!-- Nice Select -->
-    <script src="plugins/nice-select/jquery.nice-select.min.js"></script>
+    <!-- Contact -->
+  </main>
+  <!-- Footer -->
+  <footer class="footer style1 bg-image-2" style="background-image: url('assets/img/background/bg-5_2.png')">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer--inner">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0"></div>
 
-    <!-- Cursor Effect -->
-    <script src="plugins/cursor-effect/cursor-effect.js"></script>
+            <div class="col-lg-4 col-md-4 mb-5 mb-md-0 order-1 order-md-0">
+              <div class="footer-widget text-center">
+                <div class="logo mr-bottom-55">
+                  <a href="index.html" class=""><img src="assets/img/logo-home.png" alt="logo" /></a>
+                </div>
+                <h3 class="wptb-item--title">
+                  <span>Silicon University</span>
+                </h3>
+                <h6 class="widget-title">
+                  Bhubaneswar, Odisha,India <br />
+                  nirman@silicon.ac.in
+                </h6>
+                <div class="social-box">
+                  <ul>
+                    <li>
+                      <a href="https://www.facebook.com/" class="bi bi-facebook"></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/" class="bi bi-instagram"></a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/" class="bi bi-linkedin"></a>
+                    </li>
+                    <li>
+                      <a href="https://www.behance.com/" class="bi bi-behance"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-    <!-- Theme Custom JS -->
-    <script src="assets/js/theme.js"></script>
-  </body>
+            <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Part -->
+    <div class="footer-bottom" style="margin-top: -80px">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <div class="copyright">
+            <p>
+              <a href="#">RAYLIGHT SOFTWARES</a>
+            </p>
+          </div>
+          <div class="copyright">
+            <p>
+              <a href="#">Copyright © 2024 SIPC</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="totop">
+    <a href="#"><i class="bi bi-chevron-up"></i></a>
+  </div>
+
+  <!-- Core JS -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+  <!-- Framework -->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!-- WOW Scroll Effect -->
+  <script src="plugins/wow/wow.min.js"></script>
+
+  <!-- Swiper Slider -->
+  <script src="plugins/swiper/swiper-bundle.min.js"></script>
+  <script src="plugins/swiper/swiper-gl.min.js"></script>
+
+  <!-- Odometer Counter -->
+  <script src="plugins/odometer/appear.js"></script>
+  <script src="plugins/odometer/odometer.js"></script>
+
+  <!-- Projects -->
+  <script src="plugins/isotope/isotope.pkgd.min.js"></script>
+  <script src="plugins/isotope/imagesloaded.pkgd.min.js"></script>
+
+  <script src="plugins/isotope/tilt.jquery.js"></script>
+  <script src="plugins/isotope/isotope-init.js"></script>
+
+  <!-- Fancybox -->
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+
+  <!-- Flatpickr -->
+  <script src="plugins/flatpickr/flatpickr.min.js"></script>
+
+  <!-- Nice Select -->
+  <script src="plugins/nice-select/jquery.nice-select.min.js"></script>
+
+  <!-- Cursor Effect -->
+  <script src="plugins/cursor-effect/cursor-effect.js"></script>
+
+  <!-- Theme Custom JS -->
+  <script src="assets/js/theme.js"></script>
+</body>
+
 </html>

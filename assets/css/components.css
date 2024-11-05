@@ -1078,7 +1078,7 @@
     text-align: center;
     margin-left: 15%;
     position: absolute;
-    top:33%;
+    top:24%;
     z-index: 2;
     margin-top: 4%;
   
@@ -1099,7 +1099,7 @@
   .hello-button {
     margin-left: 25%;
     position: absolute;
-    top:60%;
+    top:50%;
     z-index: 2;
     border-radius: 5px;
   }
@@ -1222,12 +1222,15 @@
     left: 25%;
     
   }
+  .nn{
+    margin-top: -130px;
+  }
   /* Adjust the logo size for mobile */
   .wptb-slider.style1 .wptb-slider--inner .logo-home {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
+    margin-top: -35px;
   }
-
   /* Adjust the overlay opacity for mobile if needed */
   .wptb-slider.style1 .wptb-slider--inner::before {
     background-color: transparent;
@@ -1239,11 +1242,14 @@
   max-width: 72.917vw;
   margin-left: auto;
 }
-.wptb-slider.style1 .wptb-slider--image img {
+
+/* hello img */
+.wptb-slider.style1 .wptb-slider--image img{
   width: 100%;
-  height: 100%;
+  height: 450px;
   object-fit: cover;
 }
+
 .wptb-slider.style1 .swiper-slide-active .wptb-slider--image {
   opacity: 1;
 }
